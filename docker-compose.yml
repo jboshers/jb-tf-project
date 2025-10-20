@@ -1,0 +1,6 @@
+services:
+  dev:
+    build: .
+    ports:
+      - "3000:3000"
+# Need to sort out test env
