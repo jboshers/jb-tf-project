@@ -1,0 +1,8 @@
+@theme {
+  /* Define custom colors */
+  --color-primary: #4285f4;
+  --color-secondary: #6cb2eb;
+  --color-accent: #ffed4a;
+  --color-link: #266dd3;
+  --font-sans: "Manrope", sans-serif;
+}
