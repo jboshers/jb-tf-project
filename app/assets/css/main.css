@@ -1,2 +1,28 @@
 @import "tailwindcss";
 @import "./brand/theme.css";
+
+@layer components {
+  .welcome {
+    @apply relative bg-linear-to-r from-accent to-primary;
+    overflow: hidden;
+  }
+  .welcome::after {
+    content: "";
+    width: 22rem;
+    height: 22rem;
+    background: url("/img/login_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: -5rem;
+    left: -7rem;
+    position: absolute;
+    display: inline-block;
+    opacity: 0.2;
+  }
+
+  .logomark {
+    background: url("/img/logomark.png");
+    background-repeat: no-repeat;
+    background-size: 600% 100%;
+  }
+}

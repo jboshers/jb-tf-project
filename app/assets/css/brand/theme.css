@@ -1,8 +1,17 @@
 @theme {
-  /* Define custom colors */
+  /* Brand colors */
   --color-primary: #4285f4;
   --color-secondary: #6cb2eb;
-  --color-accent: #ffed4a;
+  --color-accent: #052444;
+  /* App Defaults */
   --color-link: #266dd3;
+  --color-border: #e5e7eb;
+  --color-input: #f3f4f6;
+  --color-ring: #8b5cf6;
+  --color-background: #ffffff;
+  --color-foreground: #ffffff;
+  --color-card-bg: #ffffff;
+  --color-card-fg: #777777;
+  /* Fonts */
   --font-sans: "Manrope", sans-serif;
 }
