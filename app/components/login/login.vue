@@ -1,4 +1,4 @@
-<!-- components/LoginForm.vue -->
+<!-- components/Login.vue -->
 <template>
   <form
     @submit.prevent="handleSubmit"
@@ -80,7 +80,10 @@
       {{ loading ? "Signing in…" : "Continue" }}
     </button>
 
-    <NuxtLink to="/create-account" class="text-sm no-underline hover:underline">
+    <NuxtLink
+      to="/forgot-password"
+      class="text-sm no-underline hover:underline"
+    >
       Forgot Password?
     </NuxtLink>
 
@@ -95,7 +98,7 @@
       <button
         type="button"
         class="flex items-center justify-center gap-2 rounded-lg border px-4 py-2 cursor-pointer hover:bg-gray-50"
-        @click="console.log('Google oauth')"
+        @click="emit('oauth', 'google')"
         aria-label="Continue with Google"
       >
         <!-- Simple G icon -->
@@ -106,7 +109,7 @@
       <button
         type="button"
         class="flex items-center justify-center gap-2 rounded-lg border px-4 py-2 cursor-pointer hover:bg-gray-50"
-        @click="console.log('Apple oauth')"
+        @click="emit('oauth', 'apple')"
         aria-label="Continue with Apple"
       >
         <NuxtImg class="size-4" src="/img/apple.svg" />
