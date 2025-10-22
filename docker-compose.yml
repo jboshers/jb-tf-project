@@ -3,4 +3,10 @@ services:
     build: .
     ports:
       - "3000:3000"
-# Need to sort out test env
+  test:
+    build:
+      context: .
+    volumes:
+      - .:/app
+      - /app/node_modules
+    working_dir: /app

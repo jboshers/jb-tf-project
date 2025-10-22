@@ -2,6 +2,7 @@
 
 # Variables
 COMPOSE_FILE = docker-compose.yml
+NUXT_TEST_COMMAND := npm run test
 
 # Targets
 dev: up
@@ -16,8 +17,9 @@ down:
 build:
 	docker-compose -f $(COMPOSE_FILE) build
 
-# Need to figure out what nuxt uses for testing. 
-# test:
+test: up
+	@echo "Running tests..."
+	docker compose run --rm test $(NUXT_TEST_COMMAND) --passWithNoTests --changedSince=HEAD~1 --config=vitest.config.ts
 
 clean: down
 	docker-compose -f $(COMPOSE_FILE) rm -f -v
